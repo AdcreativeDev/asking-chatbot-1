@@ -37,6 +37,8 @@ with st.sidebar:
     system_openai_api_key = os.environ.get('OPENAI_API_KEY')
     system_openai_api_key = st.text_input(":key: OpenAI Key :", value=system_openai_api_key)
     os.environ["OPENAI_API_KEY"] = system_openai_api_key
+    openai.api_key = system_openai_api_key
+
     
     
 
